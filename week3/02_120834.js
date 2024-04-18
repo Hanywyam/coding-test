@@ -26,11 +26,7 @@ const solution = (age) => {
 - map()을 이용하여 문자열 인덱스를 찾아 새로운 배열을 생성한다.
 */
 
-const solution = (age) =>
-  (age = (age + "")
-    .split("")
-    .map((v) => "abcdefghij"[v])
-    .join(""));
+const solution = (age) => [...(age + "")].map((v) => "abcdefghij"[v]).join("");
 
 console.log(solution(23));
 console.log(solution(51));
